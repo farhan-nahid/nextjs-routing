@@ -1,14 +1,32 @@
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
 
 const ReviewId = () => {
   const router = useRouter();
-  const rId = router.query.reviewId;
+  const { productId, reviewId } = router.query;
 
   return (
-    <div>
-      <h1>This is Review {rId}</h1>
-    </div>
+    <>
+      <ul>
+        <li>
+          <Link href='/'>Home</Link>
+        </li>
+        <li>
+          <Link href='/about'>About</Link>
+        </li>
+        <li>
+          <Link href='/blogs'>Blogs</Link>
+        </li>
+        <li>
+          <Link href='/products'>Products</Link>
+        </li>
+      </ul>
+      <button onClick={() => router.back()}>Go Back</button>
+      <h1>
+        Product id is {productId} & Review {reviewId}
+      </h1>
+    </>
   );
 };
 
