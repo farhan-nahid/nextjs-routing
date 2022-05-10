@@ -20,6 +20,8 @@ export default function Layout({ children }) {
       </ul>
 
       {children}
+
+      <footer>&copy; All right reserved</footer>
     </>
   );
 }
