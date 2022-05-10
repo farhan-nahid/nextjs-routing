@@ -76,7 +76,8 @@ ul li a:hover {
   text-align: center;
 }
 
-h2 {
+h2,
+h5 {
   margin: 20px 0;
 }
 
